@@ -6,6 +6,7 @@ const isPrime = (num) => {
     }
     return true;
 };
+
 const isPrimeNumbers = arr.filter(isPrime);
 console.log(isPrimeNumbers);
 
