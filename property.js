@@ -5,16 +5,9 @@ const people = [
 ];
 
 const grouped = {};
+const hanoiPeople = people.filter(p => p.city === "Hanoi");
+grouped["Hanoi"] = hanoiPeople.map(p => p.name);
 
-for (let person of people) {
-  const city = person.city;
-  const name = person.name;
-
-  if (!grouped[city]) {
-    grouped[city] = [];
-  }
-
-  grouped[city].push(name);
-}
-
+const saigonPeople = people.filter(p => p.city === "Saigon");
+grouped["Saigon"] = saigonPeople.map(p => p.name);
 console.log(grouped);
